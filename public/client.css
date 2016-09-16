@@ -1,0 +1,16 @@
+#login-button{
+  display: none;
+}
+#map {
+  height: 70%;
+  width: 60%;
+  margin-left: 20%;
+}
+#create_event{
+  margin-left: 20%;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
