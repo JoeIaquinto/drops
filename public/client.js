@@ -32,7 +32,11 @@ function statusChangeCallback(response) {
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
+      var uid = response.authResponse.userID;
+      console.log('connected');
+      //var accessToken = response.authResponse.accessToken;
       // Logged into your app and Facebook.
+      //$('#login-button').show();
       //show map
       $('body').append("<h1>Drops</h1><div id='map'></div>");
       $.getScript('https://maps.googleapis.com/maps/api/js?key='+MAPS_API_KEY, function(){
@@ -40,17 +44,18 @@ function statusChangeCallback(response) {
         findNearbyEvents();//response.authResponse.userID
       });
       //Do do something with FB API
-
-      $('body').append("<div id='create_event'><p>Please Create a facebook event for your drop and return to the webpage</p><a href='https://www.facebook.com/events/upcoming' target='_blank'><button>Create Event</button></a></div>")
+      $('body').append("<div id='create_event'><p>Please Create a facebook event for your drop and return to the webpage</p><a href='https://www.facebook.com/events/upcoming' target='_blank'><button>Create Event</button></a></div>");
+      //$('#login-button').hide();
     } else if (response.status === 'not_authorized') {
+      console.log('not authorized ')
       // The person is logged into Facebook, but not your app.
-      $('#login-button').show();
+      //$('#login-button').show();
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
-      $('#login-button').show();
+      //$('#login-button').show();
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
     }
@@ -64,7 +69,7 @@ function checkLoginState() {
 
 window.fbAsyncInit = function() {
     FB.init({
-      appId      : '134789780309754',
+      appId      : '947114272081141',
       xfbml      : true,
       version    : 'v2.7'
     });
