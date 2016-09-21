@@ -4,12 +4,12 @@ import {
 
 import HomeScreen from '../screens/HomeScreen';
 import MapScreen from '../screens/MapScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import UserScreen from '../screens/UserScreen';
 import RootNavigation from './RootNavigation';
 
 export default createRouter(() => ({
   home: () => HomeScreen,
   map: () => MapScreen,
-  settings: () => SettingsScreen,
+  user: () => UserScreen,
   rootNavigation: () => RootNavigation,
 }));

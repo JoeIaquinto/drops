@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
+import { DropCard } from '../components/DropCard';
 
 export default class HomeScreen extends React.Component {
   static route = {
@@ -25,7 +26,6 @@ export default class HomeScreen extends React.Component {
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainer}>
-
         </ScrollView>
 
       </View>
