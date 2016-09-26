@@ -23,7 +23,7 @@ export default class MapScreen extends React.Component {
                 latitudeDelta: 0.1,
                 longitudeDelta: 0.1,
               }}
-            />
+        />
     );
   }
 

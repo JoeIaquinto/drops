@@ -1,0 +1,96 @@
+{
+  "drops": {
+    "123abc": {
+      "name":"First Drop Ever",
+      "location":[
+        {
+          "id":"123123123",
+          "name":"Bella's",
+          "geolocation":"blank"
+        }
+
+      ],
+      "time":{
+        "duration":"120",
+        "startTimes":["datetimeobject420"]
+      },
+      "description":"The greatest Drop ever",
+      "people":{
+        "facebookidididid":{
+          "permissions":"Creator",
+          "locations":[
+            {
+              "id":"123123123",
+              "name":"Bella's",
+              "geolocation":"blank"
+            }
+          ],
+          "times":["datetimeobject420"],
+          "status":"Creator"
+        }
+      },
+      "feed":[
+        {
+          "uId":"facebookidididid",
+          "act":"CREATED",
+          "time":"datetimeobject420"
+        }
+      ],
+    },
+    "234bcd": {
+      "name":"Second Drop Ever",
+      "location":[
+        {
+          "id":"123123123",
+          "name":"Your Mom's",
+          "geolocation":"blank"
+        }
+
+      ],
+      "time":{
+        "duration":"120",
+        "startTimes":["6/21 4:20pm"]
+      },
+      "description":"The greatest Drop ever",
+      "people":{
+        "facebookidididid":{
+          "permissions":"Creator",
+          "locations":[
+            {
+              "id":"123123123",
+              "name":"Bella's",
+              "geolocation":"blank"
+            }
+          ],
+          "times":["datetimeobject420"],
+          "status":"Creator"
+        },
+        "bro":{
+          "permissions":"Creator",
+          "locations":[
+            {
+              "id":"123123123",
+              "name":"Bella's",
+              "geolocation":"blank"
+            }
+          ],
+          "times":["datetimeobject420"],
+          "status":"Creator"
+        },
+      },
+      "feed":[
+        {
+          "uId":"facebookidididid",
+          "act":"CREATED",
+          "time":"datetimeobject420"
+        }
+      ],
+    },
+  },
+  "users":{
+    "facebookidididid":{
+      "name":"Joe",
+      "drops":["123abc","234bcd"]
+      }
+  }
+}

@@ -3,7 +3,7 @@ import {
   Image,
   Linking,
   Platform,
-  ScrollView,
+  ListView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -11,25 +11,66 @@ import {
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
-import { DropCard } from '../components/DropCard';
-
+import { FeedRow } from '../components/FeedRow';
+import data from '../dropdata.json'
 export default class HomeScreen extends React.Component {
   static route = {
     navigationBar: {
       visible: false,
     },
   }
-
+  constructor(){
+    super();
+    const ds = new ListView.DataSource({rowHasChanged: (r1,r2) => r1 !== r2});
+    this.state = {
+      dataSource: ds.cloneWithRows(this._genRows(data))
+    };
+  }
+  // TODO: Add button header
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView
+        <ListView
           style={styles.container}
-          contentContainerStyle={styles.contentContainer}>
-        </ScrollView>
-
+          contentContainerStyle={styles.contentContainer}
+          dataSource={this.state.dataSource}
+          renderRow={this._renderRow}
+        />
       </View>
     );
+  }
+  _renderRow(rowData){
+    return (
+      <View style={styles.rowcontainer}>
+        <View style={styles.feedcontainer}>
+          <Text style={styles.feedcontainer}>{rowData.feed.uId}</Text>
+          <Text style={styles.feedcontainer}>{rowData.feed.act}</Text>
+          <Text style={styles.feedcontainer}>{rowData.name}</Text>
+        </View>
+        <View style={styles.feedcontainer}>
+          <Text style={styles.feedcontainer}>At {rowData.loc}</Text>
+          <Text style={styles.feedcontainer}>{rowData.time}</Text>
+          <Text style={styles.feedcontainer}>{rowData.people}</Text>
+        </View>
+      </View>
+    )
+  }
+  _genRows(data){
+    var dataBlob = []
+    for (var i=0; i<data.users["facebookidididid"].length; ++i) {
+      var dropKey = data.users["facebookidididid"][i];
+      for (var j=0; j<data.drops[dropKey].feed.length; ++j) {
+        var row = {};
+        row.name = (data.drops[dropKey].name);
+        row.loc = (data.drops[dropKey].location[0].name);
+        row.time = (data.drops[dropKey].time.startTimes[0]);
+        row.people = Object.keys(data.drops[dropKey].people).length;
+        row.feed = data.drops[dropKey].feed[j];
+        dataBlob.push(row);
+      }
+    }
+    console.log(dataBlob);
+    return dataBlob;
   }
 
 }
@@ -117,5 +158,21 @@ const styles = StyleSheet.create({
   helpLinkText: {
     fontSize: 14,
     color: '#2e78b7',
+  },
+  rowcontainer: {
+    flex: 1,
+    paddingTop: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+  },
+  feedcontainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#ccc',
+  },
+  dropcontainer: {
+    flex: 1,
+    backgroundColor: '#ddd',
   },
 });
