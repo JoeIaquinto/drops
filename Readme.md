@@ -3,6 +3,10 @@ Drops Proposal
 # Team
 ----------
   Joe Iaquinto iaquij@rpi.edu
+  Brendan Courson coursb@rpi.edu
+  
+  Help from Chris Dower @Cdower
+
 # Description
 ----------
 
