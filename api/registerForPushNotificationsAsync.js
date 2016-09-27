@@ -8,7 +8,6 @@ import {
 
 // Example server, implemented in Rails: https://git.io/vKHKv
 const PUSH_ENDPOINT = 'https://exponent-push-server.herokuapp.com/tokens';
-
 export default async function registerForPushNotificationsAsync() {
   // Android remote notification permissions are granted during the app
   // install, so this will only ask on iOS
@@ -23,7 +22,7 @@ export default async function registerForPushNotificationsAsync() {
   let token = await Notifications.getExponentPushTokenAsync();
 
   // POST the token to our backend so we can use it to send pushes from there
-  return fetch(PUSH_ENDPOINT, {
+  /**return fetch(PUSH_ENDPOINT, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -34,5 +33,5 @@ export default async function registerForPushNotificationsAsync() {
         value: token,
        },
     }),
-  });
+  });**/
 }

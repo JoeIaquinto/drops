@@ -10,13 +10,15 @@ import {
   View,
 } from 'react-native';
 
+import Collapsible from 'react-native-collapsible';
 import { MonoText } from '../components/StyledText';
 import { FeedRow } from '../components/FeedRow';
+
 import data from '../dropdata.json'
 export default class HomeScreen extends React.Component {
   static route = {
     navigationBar: {
-      visible: false,
+      title: 'Drizzle'
     },
   }
   constructor(){
@@ -42,25 +44,17 @@ export default class HomeScreen extends React.Component {
   _renderRow(rowData){
     return (
       <View style={styles.rowcontainer}>
-        <View style={styles.feedcontainer}>
-          <Text style={styles.feedcontainer}>{rowData.feed.uId}</Text>
-          <Text style={styles.feedcontainer}>{rowData.feed.act}</Text>
-          <Text style={styles.feedcontainer}>{rowData.name}</Text>
-        </View>
-        <View style={styles.feedcontainer}>
-          <Text style={styles.feedcontainer}>At {rowData.loc}</Text>
-          <Text style={styles.feedcontainer}>{rowData.time}</Text>
-          <Text style={styles.feedcontainer}>{rowData.people}</Text>
-        </View>
+        <FeedRow style={styles.feedcontainer} {...rowData} />
       </View>
-    )
+    );
   }
   _genRows(data){
     var dataBlob = []
-    for (var i=0; i<data.users["facebookidididid"].length; ++i) {
-      var dropKey = data.users["facebookidididid"][i];
+    for (var i=0; i<data.users["facebookidididid"].drops.length; ++i) {
+      var dropKey = data.users["facebookidididid"].drops[i];
       for (var j=0; j<data.drops[dropKey].feed.length; ++j) {
         var row = {};
+        row.key = (dropKey);
         row.name = (data.drops[dropKey].name);
         row.loc = (data.drops[dropKey].location[0].name);
         row.time = (data.drops[dropKey].time.startTimes[0]);
@@ -69,7 +63,6 @@ export default class HomeScreen extends React.Component {
         dataBlob.push(row);
       }
     }
-    console.log(dataBlob);
     return dataBlob;
   }
 
@@ -79,12 +72,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-  },
-  developmentModeText: {
-    marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
-    fontSize: 15,
-    textAlign: 'center',
   },
   contentContainer: {
     paddingTop: 80,

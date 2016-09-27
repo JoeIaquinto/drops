@@ -8,7 +8,6 @@
           "name":"Bella's",
           "geolocation":"blank"
         }
-
       ],
       "time":{
         "duration":"120",
@@ -35,7 +34,7 @@
           "act":"CREATED",
           "time":"datetimeobject420"
         }
-      ],
+      ]
     },
     "234bcd": {
       "name":"Second Drop Ever",
@@ -45,7 +44,6 @@
           "name":"Your Mom's",
           "geolocation":"blank"
         }
-
       ],
       "time":{
         "duration":"120",
@@ -76,7 +74,7 @@
           ],
           "times":["datetimeobject420"],
           "status":"Creator"
-        },
+        }
       },
       "feed":[
         {
@@ -84,8 +82,8 @@
           "act":"CREATED",
           "time":"datetimeobject420"
         }
-      ],
-    },
+      ]
+    }
   },
   "users":{
     "facebookidididid":{

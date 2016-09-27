@@ -8,7 +8,7 @@ import {
 export default class UserScreen extends React.Component {
   static route = {
     navigationBar: {
-      title: 'exp.json'
+      title: 'Your Drops'
     },
   }
 
