@@ -29,12 +29,16 @@ export default class DropScreen extends React.Component {
         <View style={styles.container}>
           <TextInput
             style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-            onChangeText={(whattext) => this.setState({whattext,this.state.wheretext})}
+            onChangeText={(whattext) => {
+              this.setState({whattext});
+            }}
             value={this.state.whattext}
             />
           <TextInput
             style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-            onChangeText={(text) => this.setState({this.state.whattext,text})}
+            onChangeText={(wheretext) => {
+              this.setState({wheretext});
+            }}
             value={this.state.wheretext}
             />
         </View>
