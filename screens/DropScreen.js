@@ -22,7 +22,7 @@ export default class DropScreen extends React.Component {
   }
 
   render() {
-    return (
+    /*return (
       <ScrollView
         style={styles.container}
         contentContainerStyle={this.props.route.getContentContainerStyle()}>
@@ -39,7 +39,8 @@ export default class DropScreen extends React.Component {
             />
         </View>
       </ScrollView>
-    );
+    );*/
+    return(<View></View>);
   }
 }
 

@@ -13,6 +13,7 @@ import {
 import Collapsible from 'react-native-collapsible';
 import { MonoText } from '../components/StyledText';
 import { FeedRow } from '../components/FeedRow';
+import { FacebookLogin } from '../components/FacebookLogin';
 
 import data from '../dropdata.json'
 export default class HomeScreen extends React.Component {
@@ -37,10 +38,19 @@ export default class HomeScreen extends React.Component {
           contentContainerStyle={styles.contentContainer}
           dataSource={this.state.dataSource}
           renderRow={this._renderRow}
+          renderHeader={this._renderHeader}
         />
       </View>
     );
   }
+  _renderHeader(){
+    return (
+      <View style={styles.rowcontainer}>
+        <FacebookLogin style={styles.feedcontainer} />
+      </View>
+    );
+  }
+
   _renderRow(rowData){
     return (
       <View style={styles.rowcontainer}>

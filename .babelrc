@@ -3,6 +3,7 @@
   "env": {
     "development": {
       "plugins": ["transform-react-jsx-source"]
-    }
+    },
+    "facebook":1590369664592285
   }
 }
