@@ -20,59 +20,65 @@ Drops provides a sleeker approach to gathering your friends and taking your grou
 This will be the core of the user experience in Drops. Users create, edit, and interact with a Drop. It is critical that the Drop creation process be simple and quick to complete. Hopefully Drops can save people time and energy so they can come together with their friends and turn their online plans into real life experiences. 
 
 ## Getting Started
-[ ] Create barebones app in React-Native
-[ ] Create editable fields for the Drop ( 5 W’s)
+
+- [ ] Create barebones app in React-Native
+- [ ] Create editable fields for the Drop ( 5 W’s)
 
 **Who?**
 
-[ ] Add Facebook login authentication
-[ ] Add FB Graph API for friend data
-[ ] Enable Drop invitations
-[ ] Allow admins to set visibility on Drop
-[ ] Degree of separation set by the creator limits the size of the Drop
+- [ ] Add Facebook login authentication
+- [ ] Add FB Graph API for friend data
+- [ ] Enable Drop invitations
+- [ ] Allow admins to set visibility on Drop
+- [ ] Degree of separation set by the creator limits the size of the Drop
 
 **What?**
 
-[ ] Allow Admins to set an activity for the drop
-[ ] Populate field with searchable suggestions for Drop activities
-[ ] Enable straw poll suggestions from users
-[ ] Enable straw poll voting
+- [ ] Allow Admins to set an activity for the drop
+- [ ] Populate field with searchable suggestions for Drop activities
+- [ ] Enable straw poll suggestions from users
+- [ ] Enable straw poll voting
 
 **When?**
 
-[ ] Implement custom When-Is-Good system
-[ ] Allow Admins to adjust duration
-[ ] Allow admins to finalize time
-[ ] Notify users that responded to the when-is-good when time is finalized
+- [ ] Implement custom When-Is-Good system
+- [ ] Allow Admins to adjust duration
+- [ ] Allow admins to finalize time
+- [ ] Notify users that responded to the when-is-good when time is finalized
 
 **Where?**
 
-[ ] Allow Admins to set a location or create a poll
-[ ] Add custom Where-Is-Good educated polling
-  [ ] Google Places ratings
-  [ ] Straw poll voting
+- [ ] Allow Admins to set a location or create a poll
+- [ ] Add custom Where-Is-Good educated polling
+ - [ ] Google Places ratings
+ - [ ] Straw poll voting
 
 **Why?**
 
-[ ] Text field for why the Drop was made
+- [ ] Text field for why the Drop was made
+
 ## Home
 
 Outside of the Drop screen, there needs to be a place to manage Drops and see what local public Drops are happening.  There also could be a feed of Drops the user’s friends are going to.
 
-[ ] Allow users to view invites
-[ ] Allow users to view upcoming and past Drops
-[ ] Allow users to see local public Drops
-[ ] Allow users to see what Drops their friends are going to
+- [ ] Allow users to view invites
+- [ ] Allow users to view upcoming and past Drops
+- [ ] Allow users to see local public Drops
+- [ ] Allow users to see what Drops their friends are going to
+
 ## Bonus Drop Features
-[ ] Advanced Drop permission control
-  [ ] Allow admins of the Drop to be set other than the Creator
-[ ] Enable commenting on Drops
-  [ ] Stickied comments for Admins
+
+- [ ] Advanced Drop permission control
+ - [ ] Allow admins of the Drop to be set other than the Creator
+- [ ] Enable commenting on Drops
+ - [ ] Stickied comments for Admins
+
 ## Moonshots
-[ ] Make web and mobile web friendly
-[ ] Venmo or Tilt integration for Drop funding
-[ ] Add Messenger and Slack Drops integration to create a drop right from a group chat
-[ ] Automatically make a messenger group/ slack channel for the Drop.
+
+- [ ] Make web and mobile web friendly
+- [ ] Venmo or Tilt integration for Drop funding
+- [ ] Add Messenger and Slack Drops integration to create a drop right from a group chat
+- [ ] Automatically make a messenger group/ slack channel for the Drop.
   
 # Team Commitments
 ----------
