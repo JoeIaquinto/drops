@@ -1,4 +1,4 @@
-Drops Proposal
+Drops
 
 # Team
 ----------
@@ -13,16 +13,22 @@ Drops Proposal
 Drops is a flexible event planning mobile and web app that simplifies the process to the 5 W’s: Who, What, When, Where, Why, and How? A Drop created by a user can be as detailed or open-ended as they choose by allowing guests to suggest activities, locations, and times they are available. 
 Drops provides a sleeker approach to gathering your friends and taking your group chat plans to the real world because Facebook events are too inflexible and cumbersome to set up. Facebook Events Yes/ Maybe/ No does not give reliable data on when you could reschedule to allow more people to join you. Drops will utilize a built in when-is-good system to help Drop creators democratically decide when is best. Other flexible meeting and event planning solutions like [Fasterplan](http://www.fasterplan.com/) are geared towards the business world and lack integration with major social media platforms.
 
+# Progress
+
+For Fall 2016 we created a barebones app in Exponent and started work on a RESTful API backend to serve data to the app. Throughout the semester we also experimented with other web frameworks to try to find a better fit for the Drops project and educate ourselves on web app design. A few basic implementations we worked on were [drops-phoenix](https://github.com/JoeIaquinto/drops-phoenix) and [drops-angular](https://github.com/JoeIaquinto/drops-angular).
+
+Documentation can be located throughout with inline comments, in APIDocs.md, and on Exponent and React Native documentation
+
 # Goals
 ----------
 ## Create the main Drop screen
-
+ 
 This will be the core of the user experience in Drops. Users create, edit, and interact with a Drop. It is critical that the Drop creation process be simple and quick to complete. Hopefully Drops can save people time and energy so they can come together with their friends and turn their online plans into real life experiences. 
 
 ## Getting Started
 
-- [ ] Create barebones app in React-Native
-- [ ] Create editable fields for the Drop ( 5 W’s)
+- [x] Create barebones app in React-Native
+- [x] Create editable fields for the Drop ( 5 W’s) - For RESTful API
 
 **Who?**
 
@@ -34,7 +40,7 @@ This will be the core of the user experience in Drops. Users create, edit, and i
 
 **What?**
 
-- [ ] Allow Admins to set an activity for the drop
+- [x] Allow Admins to set an activity for the drop
 - [ ] Populate field with searchable suggestions for Drop activities
 - [ ] Enable straw poll suggestions from users
 - [ ] Enable straw poll voting
