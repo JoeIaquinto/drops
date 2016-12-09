@@ -15,7 +15,9 @@ Drops provides a sleeker approach to gathering your friends and taking your grou
 
 # Progress
 
-For Fall 2016 we created a barebones app in Exponent and started work on a RESTful API backend to serve data to the app. Throughout the semester we also experimented with other web frameworks to try to find a better fit for the Drops project and educate ourselves on web app design. A few basic implementations we worked on were [drops-phoenix](https://github.com/JoeIaquinto/drops-phoenix) and [drops-angular](https://github.com/JoeIaquinto/drops-angular).
+For Fall 2016 we created a barebones app in Exponent and started work on a [RESTful API backend](https://github.com/JoeIaquinto/drops-backend) to serve data to the app. Throughout the semester we also experimented with other web frameworks to try to find a better fit for the Drops project and educate ourselves on web app design. A few basic implementations we worked on were [drops-phoenix](https://github.com/JoeIaquinto/drops-phoenix) and [drops-angular](https://github.com/JoeIaquinto/drops-angular). We created some mockups of UIs for Drops and researched methods in React Native to implement them.
+
+Progress and documentation for our several other repos can be found in their README.
 
 Documentation can be located throughout with inline comments, in APIDocs.md, and on Exponent and React Native documentation
 
